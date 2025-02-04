@@ -19,6 +19,8 @@ var velocity: Vector2 = Vector2()
 func _ready() -> void:
 	gravity_scale = 0.0
 	# 중력 제거
+	continuous_cd = CCD_MODE_CAST_RAY
+	# 패들을 뚫고 지나가는 경우를 없애기 위함. 충돌 연산이 더 정밀해짐
 	
 	connect("body_entered", Callable(self, "_on_body_entered"))
 	# body_entered 시 _on_body_entered 함수와 연결

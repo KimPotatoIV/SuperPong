@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bscb7b0ms7i34"]
+
+[ext_resource type="FontFile" uid="uid://nu7neis21ibf" path="res://fonts/Ramche.ttf" id="1_ijt2u"]
+[ext_resource type="Script" path="res://scenes/hud/hud.gd" id="1_rs0lj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uh5qx"]
+font = ExtResource("1_ijt2u")
+font_size = 24
+font_color = Color(0.921569, 0.92549, 0.862745, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_700xh"]
+font = ExtResource("1_ijt2u")
+font_size = 48
+font_color = Color(0.921569, 0.92549, 0.862745, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_rs0lj")
+
+[node name="PlayerLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 134.0
+offset_bottom = 72.0
+text = "PLAYER"
+label_settings = SubResource("LabelSettings_uh5qx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ComputerLabel" type="Label" parent="."]
+offset_left = 474.0
+offset_top = 24.0
+offset_right = 600.0
+offset_bottom = 72.0
+text = "COMPUTER"
+label_settings = SubResource("LabelSettings_uh5qx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerScoreLabel" type="Label" parent="."]
+offset_left = 184.0
+offset_top = 24.0
+offset_right = 224.0
+offset_bottom = 64.0
+text = "0"
+label_settings = SubResource("LabelSettings_700xh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ComputerScoreLabel" type="Label" parent="."]
+offset_left = 416.0
+offset_top = 24.0
+offset_right = 456.0
+offset_bottom = 64.0
+text = "0"
+label_settings = SubResource("LabelSettings_700xh")
+horizontal_alignment = 1
+vertical_alignment = 1
